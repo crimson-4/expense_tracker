@@ -3,12 +3,22 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/expense_db
-    username: amar
-    password: amar1234
+    url: jdbc:postgresql://aws-0-ap-south-1.pooler.supabase.com:5432/postgres
+    username: postgres.lxavtjzepvzyhtfchugg
+    password: csv3C586l3KmYqVs
     driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/expense_db
+#    username: amar
+#    password: amar1234  ?8wPTB9uyz4*HRR
+#    driver-class-name: org.postgresql.Driver
+# === Database (Supabase) ===
+
+
+
+
 
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
