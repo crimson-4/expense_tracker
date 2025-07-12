@@ -3,13 +3,13 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://aws-0-ap-south-1.pooler.supabase.com:5432/postgres
-    username: postgres.lxavtjzepvzyhtfchugg
-    password: csv3C586l3KmYqVs
-    driver-class-name: org.postgresql.Driver
+      url: ${DB_URL}
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      driver-class-name: org.postgresql.Driver
 #    url: jdbc:postgresql://localhost:5432/expense_db
-#    username: amar
-#    password: amar1234  ?8wPTB9uyz4*HRR
+#    username:
+#    password:
 #    driver-class-name: org.postgresql.Driver
 # === Database (Supabase) ===
 
