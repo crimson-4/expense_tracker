@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/expense_db
+    username: amar
+    password: amar1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+jwt:
+  secret: use_my_secret_use_my_secret_use_my_secret_use_my_secret_use_my_secret_use_my_secret
+  app: 3600000
