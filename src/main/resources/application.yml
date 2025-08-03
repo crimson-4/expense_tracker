@@ -3,17 +3,21 @@ server:
 
 spring:
   datasource:
-    url: ${DB_URL}
-    database: ${DB_NAME}
-    username:  ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    driver-class-name: org.postgresql.Driver
-  #    url: jdbc:postgresql://localhost:5432/expense_db
-  #    username:
-  #    password:
-  #    driver-class-name: org.postgresql.Driver
+#    url: ${DB_URL}
+#    username:  ${DB_USERNAME}
+#    password: ${DB_PASSWORD}
+#    driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/expense_db
+      username: amar
+      password: amar1234
+      driver-class-name: org.postgresql.Driver
   # === Database (Supabase) ===
-
+  security:
+   oauth2:
+   resourceserver:
+   jwt:
+   secret-key: use_my_secret_use_my_secret_use_my_secret_use_my_secret_use_my_secret_use_my_secret
+   expirationMs: 3600000
 
 
 
@@ -29,4 +33,4 @@ spring:
 
 jwt:
   secret: use_my_secret_use_my_secret_use_my_secret_use_my_secret_use_my_secret_use_my_secret
-  app: 3600000
+  expirationMs: 3600000

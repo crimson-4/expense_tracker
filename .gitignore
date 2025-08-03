@@ -39,3 +39,4 @@ Thumbs.db
 logs/
 node_modules/ (if React)
 dist/
+.env

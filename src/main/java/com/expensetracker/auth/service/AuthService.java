@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 @RequiredArgsConstructor
 public class AuthService {
@@ -33,7 +35,8 @@ public class AuthService {
                 .build();
         userRepository.save(user);
         String token =jwtUtils.generateToken(user.getEmail());
-        return new AuthResponse(token);
+        UUID userId=user.getId();
+        return new AuthResponse(token,userId);
     }
 
     public  AuthResponse login(LoginRequest request){
@@ -44,6 +47,7 @@ public class AuthService {
             throw  new RuntimeException("Invalid Email or password");
         }
         String token =jwtUtils.generateToken(user.getEmail());
-        return new AuthResponse(token);
+        UUID userId=user.getId();
+        return new AuthResponse(token,userId);
     }
 }
